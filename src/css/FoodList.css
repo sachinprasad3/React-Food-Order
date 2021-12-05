@@ -1,0 +1,34 @@
+.food-list{
+    position: relative;
+    float: left;
+    width: 70%;
+  }
+ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    margin: 5px;  
+}
+.food-item{
+    text-decoration: none;
+}
+.card{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+     /* color: white; */
+
+}
+/* .card img{
+    width: 100%;
+} */
+
+.add-food-btn{
+    text-align: center;
+}
+.add-food-btn .add-btn{
+    margin: 10px auto;
+    padding: 5px 20px;
+    border-radius: 15px;
+}

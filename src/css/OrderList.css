@@ -1,0 +1,9 @@
+.order-list{
+    position: relative;
+    float: left;
+    width: 25%;
+    border: 1px solid black;
+    padding: 10px;
+    /* overflow-y: scroll; */
+
+  }

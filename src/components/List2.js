@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Button2 } from './Button2'
+// import '../css/Button.css'
 
 function List2({food, addToCart}) {
     const[count, setCount] = useState(1)
@@ -33,7 +34,7 @@ function List2({food, addToCart}) {
                     <p>{food.price}</p>                         
                     Quantity = {count}{' '}
                     <Button2 name="increment-btn" onClick={handleIncrement} label="+"/>
-                    <Button2 name="decrement-btn" onClick={handleDecrement} label="-"/>
+                    <Button2 disabled = {count < 2 ? true : false} name="decrement-btn" onClick={handleDecrement} label="-"/>
                     <br />
                 </div>
                 <div className="add-food-btn">

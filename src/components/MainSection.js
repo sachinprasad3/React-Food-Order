@@ -6,9 +6,24 @@ function MainSection() {
     const[cartItems, setCartItems] = useState([])
 
     const handleCart = (item) =>{
-        const newCart = [...cartItems, item]
-        setCartItems(newCart)
-        console.log(newCart)
+        // const newCart = [...cartItems, item]
+        // setCartItems(newCart)
+        // console.log(newCart)
+
+        const theItem = cartItems.find(food => food.id === item.id);
+        if(theItem){
+            const newCart = cartItems.map(i => i.id === item.id ?
+                                        { ...i, quantity:i.quantity + item.quantity }
+                                        : i)          
+            setCartItems(newCart)
+        }
+        else{
+            const newCart = [...cartItems, item]
+            setCartItems(newCart)
+        }
+
+        console.log(cartItems)
+
     }
 
     const removeCartItem = (id) =>{
